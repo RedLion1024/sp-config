@@ -1,0 +1,17 @@
+sp: #自定义 #定义字符串 测试数据
+  user-service: 
+    users: "[{\"id\":7, \"username\":\"abc\",\"password\":\"123\"},{\"id\":8, \"username\":\"def\",\"password\":\"456\"},{\"id\":9, \"username\":\"ghi\",\"password\":\"789\"}]"
+  
+spring:
+  application:
+    name: user-service
+    
+server:
+  port: 8101
+  
+eureka:
+  client:
+    service-url:
+         #标明服务器物理位置: 客户端以该路径向注册中心提交注册信息
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+ 
